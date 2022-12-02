@@ -18,4 +18,6 @@ if __name__ == \"__main__\":
 
 cd ..
 mkdir Rust && cd Rust && cargo new $name
+cd $name && echo "/target
+Cargo.lock" >> .gitignore
 
