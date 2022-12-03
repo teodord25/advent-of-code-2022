@@ -8,8 +8,8 @@ fn part_1(input_str: &str) -> i64 {
     let mut total = 0;
     let pairs = input_str.split("\n");
     for pair in pairs {
-        let opponent_shape = pair.split_whitespace().collect::<Vec<&str>>()[0];
-        let my_shape = pair.split_whitespace().collect::<Vec<&str>>()[1];
+        let opponent_shape = pair.split_whitespace().nth(0).unwrap();
+        let my_shape = pair.split_whitespace().nth(1).unwrap();
 
         let shape_value = match my_shape {
             "X" => 1,
@@ -18,24 +18,31 @@ fn part_1(input_str: &str) -> i64 {
             _ => 0,
         };
 
-        let mut game_result = 0;
-        if opponent_shape == "A" {
-            if my_shape == "X" {game_result = 3}
-            if my_shape == "Y" {game_result = 6}
-            if my_shape == "Z" {game_result = 0}
-        }
+        let game_result = match opponent_shape {
+            "A" => match my_shape {
+                "X" => 3,
+                "Y" => 6,
+                "Z" => 0,
+                _ => 0,
+            },
 
-        if opponent_shape == "B" {
-            if my_shape == "X" {game_result = 0}
-            if my_shape == "Y" {game_result = 3}
-            if my_shape == "Z" {game_result = 6}
-        }
+            "B" => match my_shape {
+                "X" => 0,
+                "Y" => 3,
+                "Z" => 6,
+                _ => 0,
+            },
 
-        if opponent_shape == "C" {
-            if my_shape == "X" {game_result = 6}
-            if my_shape == "Y" {game_result = 0}
-            if my_shape == "Z" {game_result = 3}
-        }
+            "C" => match my_shape {
+                "X" => 6,
+                "Y" => 0,
+                "Z" => 3,
+                _ => 0,
+            },
+
+            _ => 0,
+        };
+
         total += shape_value;
         total += game_result;
     }
@@ -130,6 +137,7 @@ fn part_2(input_str: &str) -> i64 {
 }
 
 fn main() {
+
     println!("{}", part_1(&input_str));
     println!("{}", part_2(&input_str));
 }
