@@ -10,14 +10,11 @@ name=$2
 mkdir $day && cd $day
 
 mkdir Python && cd Python && mkdir $name
-echo "def main():
-    pass
-
-if __name__ == \"__main__\":
-    main()" >> $name/main.py
+cp ../../.pyTemplate.py $name/main.py
 
 cd ..
 mkdir Rust && cd Rust && cargo new $name
+cp ../../.rustTemplate.rs $name/src/main.rs
 cd $name && echo "/target
 Cargo.lock" >> .gitignore
 
