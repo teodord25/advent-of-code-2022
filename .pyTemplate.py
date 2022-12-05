@@ -21,7 +21,7 @@ def part_2(input_str: str) -> int:
 
 
 def main(input_str):
-    if not input_str.isalpha():
+    if len(input_str.strip()) == 0:
         raise NotImplementedError("puzzle input string missing")
 
     print(part_1(input_str))
