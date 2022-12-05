@@ -1,20 +1,18 @@
 #!/bin/bash
 
-if [[ $# -ne 2 ]] ; then 
-  echo "Must supply 2 arguments"
+if [[ $# -ne 1 ]] ; then 
+  echo "Must supply 1 argument"
   exit 1
 fi
 
 day=$1
-name=$2
 mkdir $day && cd $day
 
-mkdir Python && cd Python && mkdir $name
-cp ../../.pyTemplate.py $name/main.py
+mkdir Python
+cp ../.pyTemplate.py Python/main.py
 
-cd ..
-mkdir Rust && cd Rust && cargo new $name
-cp ../../.rustTemplate.rs $name/src/main.rs
-cd $name && echo "/target
+cargo new Rust
+cp ../.rustTemplate.rs Rust/src/main.rs
+cd Rust && echo "/target
 Cargo.lock" >> .gitignore
 
