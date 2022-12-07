@@ -30,5 +30,5 @@ def main(input_str):
 
 if __name__ == "__main__":
     with open("input.txt") as f:
-        main(f.read)
+        main(f.read())
 

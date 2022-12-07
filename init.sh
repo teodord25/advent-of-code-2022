@@ -9,9 +9,11 @@ day=$1
 mkdir $day && cd $day
 
 mkdir Python
+touch Python/input.txt
 cp ../.pyTemplate.py Python/main.py
 
 cargo new Rust
+touch Rust/input.txt
 cp ../.rustTemplate.rs Rust/src/main.rs
 cd Rust && echo "/target
 Cargo.lock" >> .gitignore
