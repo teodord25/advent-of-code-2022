@@ -1,4 +1,4 @@
-use std::{fs, collections::HashSet, char::from_digit};
+use std::{fs, collections::HashSet, char::from_digit, borrow::{Borrow, BorrowMut}};
 
 
 fn part_1(input_str: &str) -> i64 {
@@ -156,286 +156,144 @@ fn part_1(input_str: &str) -> i64 {
     positions.len() as i64
 }
 
-fn part_2(input_str: &str) -> i64 {
-    let mut positions: HashSet<[i64;2]> = HashSet::new();
 
-    let s = [i64::MAX/2, i64::MAX/2];
-    let s = [11, 15];
-    // 26 by 22
+struct Knot {
+    x: i64,
+    y: i64,
+}
 
-    // let mut tail = s;
-    let mut head: [i64;2] = s;
-    let mut knots: Vec<[i64;2]> = vec![s;9];
+impl Knot {
+    fn new() -> Knot {
+        Knot {x: 0, y: 0}
+    }
 
-    // let mut dist = 0f32;
-    let mut diff = [0, 0];
-    let mut diffs: Vec<[i64;2]> = vec![[0;2];10];
+    fn up(&mut self) { self.y -= 1; }
 
-    let moves: Vec<&str> = input_str.split("\n").collect();
+    fn down(&mut self) { self.y += 1; }
 
-    let mut map = vec![vec!['#'; 26]; 22];
-    fn print_map(head: [i64;2], knots: &Vec<[i64;2]>, map: &mut Vec<Vec<char>>) {
+    fn left(&mut self) { self.x -= 1; }
 
-        for i in 0..map.len() {
-            for j in 0..map[0].len() {
-                map[i][j] = '.';
+    fn right(&mut self) { self.x += 1; }
+
+    fn move_to(&mut self, x: i64, y: i64) { self.x = x; self.y = y; }
+
+    fn follow(&mut self, knot: Knot) -> () {
+        let delta_x = knot.x - self.x;
+        let delta_y = knot.y - self.y;
+
+        if delta_y.abs() > 1 && delta_x.abs() > 1 {
+            self.x += delta_x - delta_x.signum();
+            self.y += delta_y - delta_y.signum();
+        }
+           
+        else if delta_x.abs() > 1 {
+            self.x += delta_x - delta_x.signum();
+
+            if delta_y.abs() > 0 {
+                self.y += delta_y;
             }
         }
 
-        for i in (0..knots.len()).rev() {
+        else if delta_y.abs() > 1 {
+            self.y += delta_y - delta_y.signum();
 
-            let k = knots[i];
-            let kx = (k[0] % 26) as usize;
-            let ky = (k[1] % 22) as usize;
-
-
-            map[ky][kx] = from_digit(i as u32, 10).unwrap();
+            if delta_x.abs() > 0 {
+                self.x += delta_x;
+            }
         }
-
-        map[(head[1] % 22) as usize][(head[0] % 26) as usize] = 'H';
-
-
-        println!("{}\n",
-            map
-            .iter()
-            .map(
-                |row| row
-                .iter()
-                .map(
-                    |c| c
-                    .to_string()
-                )
-                .collect::<Vec<String>>()
-                .join("")
-            )
-            .collect::<Vec<String>>()
-            .join("\n")
-        )
     }
+}
+
+
+fn print_map(knots: &Vec<Knot>) {
+    let mut map = vec![vec!['#'; 26]; 22];
+
+    for i in 0..map.len() {
+        for j in 0..map[0].len() {
+            map[i][j] = '.';
+        }
+    }
+
+    fn modulo(a: i64, b: i64) -> i64 {
+        ((a % b) + b) % b
+    }
+
+    for (i, knot) in knots.iter().enumerate().rev() {
+        let kx = modulo(knot.x + 11, 26) as usize;
+        let ky = modulo(knot.y + 15, 22) as usize;
+
+        map[ky][kx] = from_digit(i as u32, 10).unwrap();
+    }
+
+    let head = &knots[0];
+    let hx = modulo(head.x + 11, 26) as usize;
+    let hy = modulo(head.y + 15, 22) as usize;
+    map[hy][hx] = 'H';
+
+    println!("{}\n",
+        map.iter().map(
+            |row| row.iter().map(
+                |c| c .to_string()).collect::<Vec<String>>().join("")
+        ).collect::<Vec<String>>().join("\n"));
+}
     
-    print_map(head, &knots, &mut map);
+
+
+fn part_2(input_str: &str) -> i64 {
+    let mut knots: Vec<Knot> = (0..10).map(|_| Knot::new()).collect();
+    let mut positions: HashSet<[i64; 2]> = HashSet::new();
+
+    let moves: Vec<&str> = input_str.split("\n").collect();
+
+    print_map(&knots);
+
     for m in moves {
         let direction = m.split(" ").nth(0).unwrap();
-        let number: u32 = m.split(" ").nth(1).unwrap().parse().unwrap();
+        let steps: i64 = m.split(" ").nth(1).unwrap().parse().unwrap();
 
         println!("== {m} ==\n");
-        for _ in 0..number {
+        for _ in 0..steps {
             match direction {
                 "U" => {
-                    // println!("{number}");
-                    // println!("head {head:?}");
-                    println!("diffs {:?}", diffs);
-                    head[1] -= 1;
-                    (diffs[0][0], diffs[0][1]) = (head[0].abs_diff(knots[0][0]) as i64, head[1].abs_diff(knots[0][1]) as i64);
-
-                    let mut ym: i64 = 0;
-                    let mut xm: i64 = 0;
-
-                    if diffs[0][0] > 1 || diffs[0][1] > 1 {
-                        if diffs[0][0] == 0 || diffs[0][1] == 0 {
-
-                            knots[0][1] -= 1;
-                            ym = -1;
-
-                            diffs[0][1] -= 1;
-                            diffs[1][1] += 1;
-
-                        } else {
-                            xm = (head[0] - knots[0][0]) as i64;
-                            knots[0][0] = head[0];
-                            println!("XM {xm}");
-                            println!("head {head:?}");
-                            println!("knot {:?}", knots[0]);
-
-                            diffs[0][0] -= 1;
-                            diffs[1][0] += 1;
-
-
-                            knots[0][1] -= 1;
-                            ym = -1;
-
-                            diffs[0][1] -= 1;
-                            diffs[1][1] += 1;
-                        }
-                    }
-
-                    for i in 1..knots.len() - 1 {
-                        if diffs[i][0] > 1 || diffs[i][1] > 1 {
-                            if diffs[i][0] == 0 || diffs[i][1] == 0 {
-                                knots[i][1] += ym;
-                                println!("diffs TRY TO [{i}][1] - 1 {:?}", diffs);
-                                diffs[i][1] -= 1;
-                                diffs[i+1][1] += 1;
-
-                            } else {
-                                knots[i][1] += ym;
-                                knots[i][0] += xm;
-
-                                diffs[i][1] -= 1;
-                                diffs[i][0] -= 1;
-                                diffs[i+1][1] += 1;
-                                diffs[i+1][0] += 1;
-                            }
-
-                            println!("diffs {:?}", diffs);
-                            (diffs[i+1][0], diffs[i+1][1]) = (knots[i][0].abs_diff(knots[i+1][0]) as i64, knots[i][1].abs_diff(knots[i+1][1]) as i64);
-                            println!("diffs {:?}", diffs);
-                            println!("knots: {knots:?}");
-                            positions.insert(knots[knots.len()-1]);
-                        print_map(head, &knots, &mut map);
-                        }
-                    }
-                        print_map(head, &knots, &mut map);
-
-                    // println!("diffs {diffs:?}");
-                    //     println!("head  {head:?}");
-                    //     println!("knots {knots:?}");
+                    knots[0].up();
                 }
 
                 "D" => { 
-                    head[1] += 1;
-                    (diffs[0][0], diffs[0][1]) = (head[0].abs_diff(knots[0][0]) as i64, head[1].abs_diff(knots[0][1]) as i64);
-
-
-                    if diffs[0][0] > 1 || diffs[0][1] > 1 {
-                        if diffs[0][0] == 0 || diffs[0][1] == 0 {
-                            knots[0][1] += 1;
-                            diffs[0][1] -= 1;
-                            diffs[1][1] += 1;
-
-                        } else {
-                            knots[0][0] = head[0];
-                            diffs[0][0] -= 1;
-                            diffs[1][0] += 1;
-
-                            knots[0][1] += 1;
-                            diffs[0][1] -= 1;
-                            diffs[1][1] += 1;
-                        }
-                    }
-
-                    for i in 1..knots.len() - 1 {
-                        if diffs[i][0] > 1 || diffs[i][1] > 1 {
-                            if diffs[i][0] == 0 || diffs[i][1] == 0 {
-                                knots[i][1] += 1;
-                                diffs[i][1] -= 1;
-                                diffs[i+1][1] += 1;
-
-                            } else {
-                                knots[i][0] = knots[i-1][0];
-                                diffs[i][0] -= 1;
-                                diffs[i+1][0] += 1;
-
-                                knots[i][1] += 1;
-                                diffs[i][1] -= 1;
-                                diffs[i+1][1] += 1;
-                            }
-
-                            (diffs[i+1][0], diffs[i+1][1]) = (knots[i][0].abs_diff(knots[i+1][0]) as i64, knots[i][1].abs_diff(knots[i+1][1]) as i64);
-
-                            positions.insert(knots[knots.len()-1]);
-                        }
-                    }
-                        print_map(head, &knots, &mut map);
+                    knots[0].down();
                 }
 
                 "L" => { 
-                    head[0] -= 1;
-                    (diffs[0][0], diffs[0][1]) = (head[0].abs_diff(knots[0][0]) as i64, head[1].abs_diff(knots[0][1]) as i64);
-
-
-                    if diffs[0][0] > 1 || diffs[0][1] > 1 {
-                        if diffs[0][0] == 0 || diffs[0][1] == 0 {
-                            knots[0][0] -= 1;
-                            diffs[0][0] -= 1;
-                            diffs[1][0] += 1;
-
-                        } else {
-                            knots[0][1] = head[0];
-                            diffs[0][1] -= 1;
-                            diffs[1][1] += 1;
-
-                            knots[0][0] -= 1;
-                            diffs[0][0] -= 1;
-                            diffs[1][0] += 1;
-                        }
-                    }
-
-                    for i in 1..knots.len() - 1 {
-                        if diffs[i][0] > 1 || diffs[i][1] > 1 {
-                            if diffs[i][0] == 0 || diffs[i][1] == 0 {
-                                knots[i][0] -= 1;
-                                diffs[i][0] -= 1;
-                                diffs[i+1][0] += 1;
-
-                            } else {
-                                knots[i][1] = knots[i-1][0];
-                                diffs[i][1] -= 1;
-                                diffs[i+1][1] += 1;
-
-                                knots[i][0] -= 1;
-                                diffs[i][0] -= 1;
-                                diffs[i+1][0] += 1;
-                            }
-
-                            (diffs[i+1][0], diffs[i+1][1]) = (knots[i][0].abs_diff(knots[i+1][0]) as i64, knots[i][1].abs_diff(knots[i+1][1]) as i64);
-
-                            positions.insert(knots[knots.len()-1]);
-                        }
-                    }
-                        print_map(head, &knots, &mut map);
+                    knots[0].left();
                 }
 
                 "R" => { 
-                    head[0] += 1;
-                    (diffs[0][0], diffs[0][1]) = (head[0].abs_diff(knots[0][0]) as i64, head[1].abs_diff(knots[0][1]) as i64);
-
-                    if diffs[0][0] > 1 || diffs[0][1] > 1 {
-                        if diffs[0][0] == 0 || diffs[0][1] == 0 {
-                            knots[0][0] += 1;
-                            diffs[0][0] -= 1;
-                            diffs[1][0] += 1;
-
-                        } else {
-                            knots[0][1] = head[0];
-                            diffs[0][1] -= 1;
-                            diffs[1][1] += 1;
-
-                            knots[0][0] += 1;
-                            diffs[0][0] -= 1;
-                            diffs[1][0] += 1;
-                        }
-                    }
-
-                    for i in 1..knots.len() - 1 {
-                        if diffs[i][0] > 1 || diffs[i][1] > 1 {
-                            if diffs[i][0] == 0 || diffs[i][1] == 0 {
-                                knots[i][0] += 1;
-                                diffs[i][0] -= 1;
-                                diffs[i+1][0] += 1;
-
-                            } else {
-                                knots[i][1] = knots[i-1][0];
-                                diffs[i][1] -= 1;
-                                diffs[i+1][1] += 1;
-
-                                knots[i][0] += 1;
-                                diffs[i][0] -= 1;
-                                diffs[i+1][0] += 1;
-                            }
-
-                            (diffs[i+1][0], diffs[i+1][1]) = (knots[i][0].abs_diff(knots[i+1][0]) as i64, knots[i][1].abs_diff(knots[i+1][1]) as i64);
-
-                            positions.insert(knots[knots.len()-1]);
-                        }
-                    }
-                        print_map(head, &knots, &mut map);
+                    knots[0].right();
                 }
 
                 _ => ()
             }
+
+                let l = knots.len();
+
+                for i in 1..l {
+                    let x = knots[i-1].x;
+                    let y = knots[i-1].y;
+                    let mut prev = Knot::new();
+                    prev.move_to(x, y);
+
+                    let curr = &mut knots[i];
+                    curr.follow(prev);
+                }
+
+            let i = knots.len() - 1;
+            let k: &Vec<Knot> = knots.borrow();
+            let x = k[i].x;
+            let y = k[i].y;
+
+            positions.insert([x, y]);
+
+        print_map(&knots);
         }
-        print_map(head, &knots, &mut map);
     }
 
     positions.len() as i64
