@@ -1,0 +1,1398 @@
+
+monky 0 [79, 98]
+  oh no scary 79-> 1501
+1501 (rem: 6) -23> 6 (rem: 6)
+div? 23 yes? 2 no 3
+OK 6 go to monky 3
+  oh no scary 98-> 1862
+1862 (rem: 22) -23> 22 (rem: 22)
+div? 23 yes? 2 no 3
+OK 22 go to monky 3
+
+monky 1 [54, 65, 75, 74]
+  oh no scary 54-> 60
+60 (rem: 3) -19> 3 (rem: 3)
+div? 19 yes? 2 no 0
+OK 3 go to monky 0
+  oh no scary 65-> 71
+71 (rem: 14) -19> 14 (rem: 14)
+div? 19 yes? 2 no 0
+OK 14 go to monky 0
+  oh no scary 75-> 81
+81 (rem: 5) -19> 5 (rem: 5)
+div? 19 yes? 2 no 0
+OK 5 go to monky 0
+  oh no scary 74-> 80
+80 (rem: 4) -19> 4 (rem: 4)
+div? 19 yes? 2 no 0
+OK 4 go to monky 0
+
+monky 2 [79, 60, 97]
+  oh no scary 79-> 6241
+6241 (rem: 1) -13> 1 (rem: 1)
+div? 13 yes? 1 no 3
+OK 1 go to monky 3
+  oh no scary 60-> 3600
+3600 (rem: 12) -13> 12 (rem: 12)
+div? 13 yes? 1 no 3
+OK 12 go to monky 3
+  oh no scary 97-> 9409
+9409 (rem: 10) -13> 10 (rem: 10)
+div? 13 yes? 1 no 3
+OK 10 go to monky 3
+
+monky 3 [74, 6, 22, 1, 12, 10]
+  oh no scary 74-> 77
+77 (rem: 9) -17> 9 (rem: 9)
+div? 17 yes? 0 no 1
+OK 9 go to monky 1
+  oh no scary 6-> 9
+9 (rem: 9) -17> 9 (rem: 9)
+div? 17 yes? 0 no 1
+OK 9 go to monky 1
+  oh no scary 22-> 25
+25 (rem: 8) -17> 8 (rem: 8)
+div? 17 yes? 0 no 1
+OK 8 go to monky 1
+  oh no scary 1-> 4
+4 (rem: 4) -17> 4 (rem: 4)
+div? 17 yes? 0 no 1
+OK 4 go to monky 1
+  oh no scary 12-> 15
+15 (rem: 15) -17> 15 (rem: 15)
+div? 17 yes? 0 no 1
+OK 15 go to monky 1
+  oh no scary 10-> 13
+13 (rem: 13) -17> 13 (rem: 13)
+div? 17 yes? 0 no 1
+OK 13 go to monky 1
+round 1
+Monkey 0 touched stuff 2 times
+Monkey 1 touched stuff 4 times
+Monkey 2 touched stuff 3 times
+Monkey 3 touched stuff 6 times
+
+monky 0 [3, 14, 5, 4]
+  oh no scary 3-> 57
+57 (rem: 11) -23> 11 (rem: 11)
+div? 23 yes? 2 no 3
+OK 11 go to monky 3
+  oh no scary 14-> 266
+266 (rem: 13) -23> 13 (rem: 13)
+div? 23 yes? 2 no 3
+OK 13 go to monky 3
+  oh no scary 5-> 95
+95 (rem: 3) -23> 3 (rem: 3)
+div? 23 yes? 2 no 3
+OK 3 go to monky 3
+  oh no scary 4-> 76
+76 (rem: 7) -23> 7 (rem: 7)
+div? 23 yes? 2 no 3
+OK 7 go to monky 3
+
+monky 1 [9, 9, 8, 4, 15, 13]
+  oh no scary 9-> 15
+15 (rem: 15) -19> 15 (rem: 15)
+div? 19 yes? 2 no 0
+OK 15 go to monky 0
+  oh no scary 9-> 15
+15 (rem: 15) -19> 15 (rem: 15)
+div? 19 yes? 2 no 0
+OK 15 go to monky 0
+  oh no scary 8-> 14
+14 (rem: 14) -19> 14 (rem: 14)
+div? 19 yes? 2 no 0
+OK 14 go to monky 0
+  oh no scary 4-> 10
+10 (rem: 10) -19> 10 (rem: 10)
+div? 19 yes? 2 no 0
+OK 10 go to monky 0
+  oh no scary 15-> 21
+21 (rem: 2) -19> 2 (rem: 2)
+div? 19 yes? 2 no 0
+OK 2 go to monky 0
+  oh no scary 13-> 19
+19 (rem: 0) -19> 0 (rem: 0)
+div? 19 yes? 2 no 0
+OK 0 go to monky 2
+
+monky 2 [0]
+  oh no scary 0-> 0
+0 (rem: 0) -13> 0 (rem: 0)
+div? 13 yes? 1 no 3
+OK 0 go to monky 1
+
+monky 3 [11, 13, 3, 7]
+  oh no scary 11-> 14
+14 (rem: 14) -17> 14 (rem: 14)
+div? 17 yes? 0 no 1
+OK 14 go to monky 1
+  oh no scary 13-> 16
+16 (rem: 16) -17> 16 (rem: 16)
+div? 17 yes? 0 no 1
+OK 16 go to monky 1
+  oh no scary 3-> 6
+6 (rem: 6) -17> 6 (rem: 6)
+div? 17 yes? 0 no 1
+OK 6 go to monky 1
+  oh no scary 7-> 10
+10 (rem: 10) -17> 10 (rem: 10)
+div? 17 yes? 0 no 1
+OK 10 go to monky 1
+round 2
+Monkey 0 touched stuff 6 times
+Monkey 1 touched stuff 10 times
+Monkey 2 touched stuff 4 times
+Monkey 3 touched stuff 10 times
+
+monky 0 [15, 15, 14, 10, 2]
+  oh no scary 15-> 285
+285 (rem: 9) -23> 9 (rem: 9)
+div? 23 yes? 2 no 3
+OK 9 go to monky 3
+  oh no scary 15-> 285
+285 (rem: 9) -23> 9 (rem: 9)
+div? 23 yes? 2 no 3
+OK 9 go to monky 3
+  oh no scary 14-> 266
+266 (rem: 13) -23> 13 (rem: 13)
+div? 23 yes? 2 no 3
+OK 13 go to monky 3
+  oh no scary 10-> 190
+190 (rem: 6) -23> 6 (rem: 6)
+div? 23 yes? 2 no 3
+OK 6 go to monky 3
+  oh no scary 2-> 38
+38 (rem: 15) -23> 15 (rem: 15)
+div? 23 yes? 2 no 3
+OK 15 go to monky 3
+
+monky 1 [0, 14, 16, 6, 10]
+  oh no scary 0-> 6
+6 (rem: 6) -19> 6 (rem: 6)
+div? 19 yes? 2 no 0
+OK 6 go to monky 0
+  oh no scary 14-> 20
+20 (rem: 1) -19> 1 (rem: 1)
+div? 19 yes? 2 no 0
+OK 1 go to monky 0
+  oh no scary 16-> 22
+22 (rem: 3) -19> 3 (rem: 3)
+div? 19 yes? 2 no 0
+OK 3 go to monky 0
+  oh no scary 6-> 12
+12 (rem: 12) -19> 12 (rem: 12)
+div? 19 yes? 2 no 0
+OK 12 go to monky 0
+  oh no scary 10-> 16
+16 (rem: 16) -19> 16 (rem: 16)
+div? 19 yes? 2 no 0
+OK 16 go to monky 0
+
+monky 2 []
+
+monky 3 [9, 9, 13, 6, 15]
+  oh no scary 9-> 12
+12 (rem: 12) -17> 12 (rem: 12)
+div? 17 yes? 0 no 1
+OK 12 go to monky 1
+  oh no scary 9-> 12
+12 (rem: 12) -17> 12 (rem: 12)
+div? 17 yes? 0 no 1
+OK 12 go to monky 1
+  oh no scary 13-> 16
+16 (rem: 16) -17> 16 (rem: 16)
+div? 17 yes? 0 no 1
+OK 16 go to monky 1
+  oh no scary 6-> 9
+9 (rem: 9) -17> 9 (rem: 9)
+div? 17 yes? 0 no 1
+OK 9 go to monky 1
+  oh no scary 15-> 18
+18 (rem: 1) -17> 1 (rem: 1)
+div? 17 yes? 0 no 1
+OK 1 go to monky 1
+round 3
+Monkey 0 touched stuff 11 times
+Monkey 1 touched stuff 15 times
+Monkey 2 touched stuff 4 times
+Monkey 3 touched stuff 15 times
+
+monky 0 [6, 1, 3, 12, 16]
+  oh no scary 6-> 114
+114 (rem: 22) -23> 22 (rem: 22)
+div? 23 yes? 2 no 3
+OK 22 go to monky 3
+  oh no scary 1-> 19
+19 (rem: 19) -23> 19 (rem: 19)
+div? 23 yes? 2 no 3
+OK 19 go to monky 3
+  oh no scary 3-> 57
+57 (rem: 11) -23> 11 (rem: 11)
+div? 23 yes? 2 no 3
+OK 11 go to monky 3
+  oh no scary 12-> 228
+228 (rem: 21) -23> 21 (rem: 21)
+div? 23 yes? 2 no 3
+OK 21 go to monky 3
+  oh no scary 16-> 304
+304 (rem: 5) -23> 5 (rem: 5)
+div? 23 yes? 2 no 3
+OK 5 go to monky 3
+
+monky 1 [12, 12, 16, 9, 1]
+  oh no scary 12-> 18
+18 (rem: 18) -19> 18 (rem: 18)
+div? 19 yes? 2 no 0
+OK 18 go to monky 0
+  oh no scary 12-> 18
+18 (rem: 18) -19> 18 (rem: 18)
+div? 19 yes? 2 no 0
+OK 18 go to monky 0
+  oh no scary 16-> 22
+22 (rem: 3) -19> 3 (rem: 3)
+div? 19 yes? 2 no 0
+OK 3 go to monky 0
+  oh no scary 9-> 15
+15 (rem: 15) -19> 15 (rem: 15)
+div? 19 yes? 2 no 0
+OK 15 go to monky 0
+  oh no scary 1-> 7
+7 (rem: 7) -19> 7 (rem: 7)
+div? 19 yes? 2 no 0
+OK 7 go to monky 0
+
+monky 2 []
+
+monky 3 [22, 19, 11, 21, 5]
+  oh no scary 22-> 25
+25 (rem: 8) -17> 8 (rem: 8)
+div? 17 yes? 0 no 1
+OK 8 go to monky 1
+  oh no scary 19-> 22
+22 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 11-> 14
+14 (rem: 14) -17> 14 (rem: 14)
+div? 17 yes? 0 no 1
+OK 14 go to monky 1
+  oh no scary 21-> 24
+24 (rem: 7) -17> 7 (rem: 7)
+div? 17 yes? 0 no 1
+OK 7 go to monky 1
+  oh no scary 5-> 8
+8 (rem: 8) -17> 8 (rem: 8)
+div? 17 yes? 0 no 1
+OK 8 go to monky 1
+
+monky 0 [18, 18, 3, 15, 7]
+  oh no scary 18-> 342
+342 (rem: 20) -23> 20 (rem: 20)
+div? 23 yes? 2 no 3
+OK 20 go to monky 3
+  oh no scary 18-> 342
+342 (rem: 20) -23> 20 (rem: 20)
+div? 23 yes? 2 no 3
+OK 20 go to monky 3
+  oh no scary 3-> 57
+57 (rem: 11) -23> 11 (rem: 11)
+div? 23 yes? 2 no 3
+OK 11 go to monky 3
+  oh no scary 15-> 285
+285 (rem: 9) -23> 9 (rem: 9)
+div? 23 yes? 2 no 3
+OK 9 go to monky 3
+  oh no scary 7-> 133
+133 (rem: 18) -23> 18 (rem: 18)
+div? 23 yes? 2 no 3
+OK 18 go to monky 3
+
+monky 1 [8, 5, 14, 7, 8]
+  oh no scary 8-> 14
+14 (rem: 14) -19> 14 (rem: 14)
+div? 19 yes? 2 no 0
+OK 14 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 14-> 20
+20 (rem: 1) -19> 1 (rem: 1)
+div? 19 yes? 2 no 0
+OK 1 go to monky 0
+  oh no scary 7-> 13
+13 (rem: 13) -19> 13 (rem: 13)
+div? 19 yes? 2 no 0
+OK 13 go to monky 0
+  oh no scary 8-> 14
+14 (rem: 14) -19> 14 (rem: 14)
+div? 19 yes? 2 no 0
+OK 14 go to monky 0
+
+monky 2 []
+
+monky 3 [20, 20, 11, 9, 18]
+  oh no scary 20-> 23
+23 (rem: 6) -17> 6 (rem: 6)
+div? 17 yes? 0 no 1
+OK 6 go to monky 1
+  oh no scary 20-> 23
+23 (rem: 6) -17> 6 (rem: 6)
+div? 17 yes? 0 no 1
+OK 6 go to monky 1
+  oh no scary 11-> 14
+14 (rem: 14) -17> 14 (rem: 14)
+div? 17 yes? 0 no 1
+OK 14 go to monky 1
+  oh no scary 9-> 12
+12 (rem: 12) -17> 12 (rem: 12)
+div? 17 yes? 0 no 1
+OK 12 go to monky 1
+  oh no scary 18-> 21
+21 (rem: 4) -17> 4 (rem: 4)
+div? 17 yes? 0 no 1
+OK 4 go to monky 1
+
+monky 0 [14, 11, 1, 13, 14]
+  oh no scary 14-> 266
+266 (rem: 13) -23> 13 (rem: 13)
+div? 23 yes? 2 no 3
+OK 13 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 1-> 19
+19 (rem: 19) -23> 19 (rem: 19)
+div? 23 yes? 2 no 3
+OK 19 go to monky 3
+  oh no scary 13-> 247
+247 (rem: 17) -23> 17 (rem: 17)
+div? 23 yes? 2 no 3
+OK 17 go to monky 3
+  oh no scary 14-> 266
+266 (rem: 13) -23> 13 (rem: 13)
+div? 23 yes? 2 no 3
+OK 13 go to monky 3
+
+monky 1 [6, 6, 14, 12, 4]
+  oh no scary 6-> 12
+12 (rem: 12) -19> 12 (rem: 12)
+div? 19 yes? 2 no 0
+OK 12 go to monky 0
+  oh no scary 6-> 12
+12 (rem: 12) -19> 12 (rem: 12)
+div? 19 yes? 2 no 0
+OK 12 go to monky 0
+  oh no scary 14-> 20
+20 (rem: 1) -19> 1 (rem: 1)
+div? 19 yes? 2 no 0
+OK 1 go to monky 0
+  oh no scary 12-> 18
+18 (rem: 18) -19> 18 (rem: 18)
+div? 19 yes? 2 no 0
+OK 18 go to monky 0
+  oh no scary 4-> 10
+10 (rem: 10) -19> 10 (rem: 10)
+div? 19 yes? 2 no 0
+OK 10 go to monky 0
+
+monky 2 []
+
+monky 3 [13, 2, 19, 17, 13]
+  oh no scary 13-> 16
+16 (rem: 16) -17> 16 (rem: 16)
+div? 17 yes? 0 no 1
+OK 16 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 19-> 22
+22 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 17-> 20
+20 (rem: 3) -17> 3 (rem: 3)
+div? 17 yes? 0 no 1
+OK 3 go to monky 1
+  oh no scary 13-> 16
+16 (rem: 16) -17> 16 (rem: 16)
+div? 17 yes? 0 no 1
+OK 16 go to monky 1
+
+monky 0 [12, 12, 1, 18, 10]
+  oh no scary 12-> 228
+228 (rem: 21) -23> 21 (rem: 21)
+div? 23 yes? 2 no 3
+OK 21 go to monky 3
+  oh no scary 12-> 228
+228 (rem: 21) -23> 21 (rem: 21)
+div? 23 yes? 2 no 3
+OK 21 go to monky 3
+  oh no scary 1-> 19
+19 (rem: 19) -23> 19 (rem: 19)
+div? 23 yes? 2 no 3
+OK 19 go to monky 3
+  oh no scary 18-> 342
+342 (rem: 20) -23> 20 (rem: 20)
+div? 23 yes? 2 no 3
+OK 20 go to monky 3
+  oh no scary 10-> 190
+190 (rem: 6) -23> 6 (rem: 6)
+div? 23 yes? 2 no 3
+OK 6 go to monky 3
+
+monky 1 [16, 5, 5, 3, 16]
+  oh no scary 16-> 22
+22 (rem: 3) -19> 3 (rem: 3)
+div? 19 yes? 2 no 0
+OK 3 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 3-> 9
+9 (rem: 9) -19> 9 (rem: 9)
+div? 19 yes? 2 no 0
+OK 9 go to monky 0
+  oh no scary 16-> 22
+22 (rem: 3) -19> 3 (rem: 3)
+div? 19 yes? 2 no 0
+OK 3 go to monky 0
+
+monky 2 []
+
+monky 3 [21, 21, 19, 20, 6]
+  oh no scary 21-> 24
+24 (rem: 7) -17> 7 (rem: 7)
+div? 17 yes? 0 no 1
+OK 7 go to monky 1
+  oh no scary 21-> 24
+24 (rem: 7) -17> 7 (rem: 7)
+div? 17 yes? 0 no 1
+OK 7 go to monky 1
+  oh no scary 19-> 22
+22 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 20-> 23
+23 (rem: 6) -17> 6 (rem: 6)
+div? 17 yes? 0 no 1
+OK 6 go to monky 1
+  oh no scary 6-> 9
+9 (rem: 9) -17> 9 (rem: 9)
+div? 17 yes? 0 no 1
+OK 9 go to monky 1
+
+monky 0 [3, 11, 11, 9, 3]
+  oh no scary 3-> 57
+57 (rem: 11) -23> 11 (rem: 11)
+div? 23 yes? 2 no 3
+OK 11 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 9-> 171
+171 (rem: 10) -23> 10 (rem: 10)
+div? 23 yes? 2 no 3
+OK 10 go to monky 3
+  oh no scary 3-> 57
+57 (rem: 11) -23> 11 (rem: 11)
+div? 23 yes? 2 no 3
+OK 11 go to monky 3
+
+monky 1 [7, 7, 5, 6, 9]
+  oh no scary 7-> 13
+13 (rem: 13) -19> 13 (rem: 13)
+div? 19 yes? 2 no 0
+OK 13 go to monky 0
+  oh no scary 7-> 13
+13 (rem: 13) -19> 13 (rem: 13)
+div? 19 yes? 2 no 0
+OK 13 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 6-> 12
+12 (rem: 12) -19> 12 (rem: 12)
+div? 19 yes? 2 no 0
+OK 12 go to monky 0
+  oh no scary 9-> 15
+15 (rem: 15) -19> 15 (rem: 15)
+div? 19 yes? 2 no 0
+OK 15 go to monky 0
+
+monky 2 []
+
+monky 3 [11, 2, 2, 10, 11]
+  oh no scary 11-> 14
+14 (rem: 14) -17> 14 (rem: 14)
+div? 17 yes? 0 no 1
+OK 14 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 10-> 13
+13 (rem: 13) -17> 13 (rem: 13)
+div? 17 yes? 0 no 1
+OK 13 go to monky 1
+  oh no scary 11-> 14
+14 (rem: 14) -17> 14 (rem: 14)
+div? 17 yes? 0 no 1
+OK 14 go to monky 1
+
+monky 0 [13, 13, 11, 12, 15]
+  oh no scary 13-> 247
+247 (rem: 17) -23> 17 (rem: 17)
+div? 23 yes? 2 no 3
+OK 17 go to monky 3
+  oh no scary 13-> 247
+247 (rem: 17) -23> 17 (rem: 17)
+div? 23 yes? 2 no 3
+OK 17 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 12-> 228
+228 (rem: 21) -23> 21 (rem: 21)
+div? 23 yes? 2 no 3
+OK 21 go to monky 3
+  oh no scary 15-> 285
+285 (rem: 9) -23> 9 (rem: 9)
+div? 23 yes? 2 no 3
+OK 9 go to monky 3
+
+monky 1 [14, 5, 5, 13, 14]
+  oh no scary 14-> 20
+20 (rem: 1) -19> 1 (rem: 1)
+div? 19 yes? 2 no 0
+OK 1 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 13-> 19
+19 (rem: 0) -19> 0 (rem: 0)
+div? 19 yes? 2 no 0
+OK 0 go to monky 2
+  oh no scary 14-> 20
+20 (rem: 1) -19> 1 (rem: 1)
+div? 19 yes? 2 no 0
+OK 1 go to monky 0
+
+monky 2 [0]
+  oh no scary 0-> 0
+0 (rem: 0) -13> 0 (rem: 0)
+div? 13 yes? 1 no 3
+OK 0 go to monky 1
+
+monky 3 [17, 17, 2, 21, 9]
+  oh no scary 17-> 20
+20 (rem: 3) -17> 3 (rem: 3)
+div? 17 yes? 0 no 1
+OK 3 go to monky 1
+  oh no scary 17-> 20
+20 (rem: 3) -17> 3 (rem: 3)
+div? 17 yes? 0 no 1
+OK 3 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 21-> 24
+24 (rem: 7) -17> 7 (rem: 7)
+div? 17 yes? 0 no 1
+OK 7 go to monky 1
+  oh no scary 9-> 12
+12 (rem: 12) -17> 12 (rem: 12)
+div? 17 yes? 0 no 1
+OK 12 go to monky 1
+
+monky 0 [1, 11, 11, 1]
+  oh no scary 1-> 19
+19 (rem: 19) -23> 19 (rem: 19)
+div? 23 yes? 2 no 3
+OK 19 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 1-> 19
+19 (rem: 19) -23> 19 (rem: 19)
+div? 23 yes? 2 no 3
+OK 19 go to monky 3
+
+monky 1 [0, 3, 3, 5, 7, 12]
+  oh no scary 0-> 6
+6 (rem: 6) -19> 6 (rem: 6)
+div? 19 yes? 2 no 0
+OK 6 go to monky 0
+  oh no scary 3-> 9
+9 (rem: 9) -19> 9 (rem: 9)
+div? 19 yes? 2 no 0
+OK 9 go to monky 0
+  oh no scary 3-> 9
+9 (rem: 9) -19> 9 (rem: 9)
+div? 19 yes? 2 no 0
+OK 9 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 7-> 13
+13 (rem: 13) -19> 13 (rem: 13)
+div? 19 yes? 2 no 0
+OK 13 go to monky 0
+  oh no scary 12-> 18
+18 (rem: 18) -19> 18 (rem: 18)
+div? 19 yes? 2 no 0
+OK 18 go to monky 0
+
+monky 2 []
+
+monky 3 [19, 2, 2, 19]
+  oh no scary 19-> 22
+22 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 19-> 22
+22 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+
+monky 0 [6, 9, 9, 11, 13, 18]
+  oh no scary 6-> 114
+114 (rem: 22) -23> 22 (rem: 22)
+div? 23 yes? 2 no 3
+OK 22 go to monky 3
+  oh no scary 9-> 171
+171 (rem: 10) -23> 10 (rem: 10)
+div? 23 yes? 2 no 3
+OK 10 go to monky 3
+  oh no scary 9-> 171
+171 (rem: 10) -23> 10 (rem: 10)
+div? 23 yes? 2 no 3
+OK 10 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 13-> 247
+247 (rem: 17) -23> 17 (rem: 17)
+div? 23 yes? 2 no 3
+OK 17 go to monky 3
+  oh no scary 18-> 342
+342 (rem: 20) -23> 20 (rem: 20)
+div? 23 yes? 2 no 3
+OK 20 go to monky 3
+
+monky 1 [5, 5, 5, 5]
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+
+monky 2 []
+
+monky 3 [22, 10, 10, 2, 17, 20]
+  oh no scary 22-> 25
+25 (rem: 8) -17> 8 (rem: 8)
+div? 17 yes? 0 no 1
+OK 8 go to monky 1
+  oh no scary 10-> 13
+13 (rem: 13) -17> 13 (rem: 13)
+div? 17 yes? 0 no 1
+OK 13 go to monky 1
+  oh no scary 10-> 13
+13 (rem: 13) -17> 13 (rem: 13)
+div? 17 yes? 0 no 1
+OK 13 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 17-> 20
+20 (rem: 3) -17> 3 (rem: 3)
+div? 17 yes? 0 no 1
+OK 3 go to monky 1
+  oh no scary 20-> 23
+23 (rem: 6) -17> 6 (rem: 6)
+div? 17 yes? 0 no 1
+OK 6 go to monky 1
+
+monky 0 [11, 11, 11, 11]
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+
+monky 1 [8, 13, 13, 5, 3, 6]
+  oh no scary 8-> 14
+14 (rem: 14) -19> 14 (rem: 14)
+div? 19 yes? 2 no 0
+OK 14 go to monky 0
+  oh no scary 13-> 19
+19 (rem: 0) -19> 0 (rem: 0)
+div? 19 yes? 2 no 0
+OK 0 go to monky 2
+  oh no scary 13-> 19
+19 (rem: 0) -19> 0 (rem: 0)
+div? 19 yes? 2 no 0
+OK 0 go to monky 2
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 3-> 9
+9 (rem: 9) -19> 9 (rem: 9)
+div? 19 yes? 2 no 0
+OK 9 go to monky 0
+  oh no scary 6-> 12
+12 (rem: 12) -19> 12 (rem: 12)
+div? 19 yes? 2 no 0
+OK 12 go to monky 0
+
+monky 2 [0, 0]
+  oh no scary 0-> 0
+0 (rem: 0) -13> 0 (rem: 0)
+div? 13 yes? 1 no 3
+OK 0 go to monky 1
+  oh no scary 0-> 0
+0 (rem: 0) -13> 0 (rem: 0)
+div? 13 yes? 1 no 3
+OK 0 go to monky 1
+
+monky 3 [2, 2, 2, 2]
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+
+monky 0 [14, 11, 9, 12]
+  oh no scary 14-> 266
+266 (rem: 13) -23> 13 (rem: 13)
+div? 23 yes? 2 no 3
+OK 13 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 9-> 171
+171 (rem: 10) -23> 10 (rem: 10)
+div? 23 yes? 2 no 3
+OK 10 go to monky 3
+  oh no scary 12-> 228
+228 (rem: 21) -23> 21 (rem: 21)
+div? 23 yes? 2 no 3
+OK 21 go to monky 3
+
+monky 1 [0, 0, 5, 5, 5, 5]
+  oh no scary 0-> 6
+6 (rem: 6) -19> 6 (rem: 6)
+div? 19 yes? 2 no 0
+OK 6 go to monky 0
+  oh no scary 0-> 6
+6 (rem: 6) -19> 6 (rem: 6)
+div? 19 yes? 2 no 0
+OK 6 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+
+monky 2 []
+
+monky 3 [13, 2, 10, 21]
+  oh no scary 13-> 16
+16 (rem: 16) -17> 16 (rem: 16)
+div? 17 yes? 0 no 1
+OK 16 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 10-> 13
+13 (rem: 13) -17> 13 (rem: 13)
+div? 17 yes? 0 no 1
+OK 13 go to monky 1
+  oh no scary 21-> 24
+24 (rem: 7) -17> 7 (rem: 7)
+div? 17 yes? 0 no 1
+OK 7 go to monky 1
+
+monky 0 [6, 6, 11, 11, 11, 11]
+  oh no scary 6-> 114
+114 (rem: 22) -23> 22 (rem: 22)
+div? 23 yes? 2 no 3
+OK 22 go to monky 3
+  oh no scary 6-> 114
+114 (rem: 22) -23> 22 (rem: 22)
+div? 23 yes? 2 no 3
+OK 22 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+
+monky 1 [16, 5, 13, 7]
+  oh no scary 16-> 22
+22 (rem: 3) -19> 3 (rem: 3)
+div? 19 yes? 2 no 0
+OK 3 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 13-> 19
+19 (rem: 0) -19> 0 (rem: 0)
+div? 19 yes? 2 no 0
+OK 0 go to monky 2
+  oh no scary 7-> 13
+13 (rem: 13) -19> 13 (rem: 13)
+div? 19 yes? 2 no 0
+OK 13 go to monky 0
+
+monky 2 [0]
+  oh no scary 0-> 0
+0 (rem: 0) -13> 0 (rem: 0)
+div? 13 yes? 1 no 3
+OK 0 go to monky 1
+
+monky 3 [22, 22, 2, 2, 2, 2]
+  oh no scary 22-> 25
+25 (rem: 8) -17> 8 (rem: 8)
+div? 17 yes? 0 no 1
+OK 8 go to monky 1
+  oh no scary 22-> 25
+25 (rem: 8) -17> 8 (rem: 8)
+div? 17 yes? 0 no 1
+OK 8 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+
+monky 0 [3, 11, 13]
+  oh no scary 3-> 57
+57 (rem: 11) -23> 11 (rem: 11)
+div? 23 yes? 2 no 3
+OK 11 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 13-> 247
+247 (rem: 17) -23> 17 (rem: 17)
+div? 23 yes? 2 no 3
+OK 17 go to monky 3
+
+monky 1 [0, 8, 8, 5, 5, 5, 5]
+  oh no scary 0-> 6
+6 (rem: 6) -19> 6 (rem: 6)
+div? 19 yes? 2 no 0
+OK 6 go to monky 0
+  oh no scary 8-> 14
+14 (rem: 14) -19> 14 (rem: 14)
+div? 19 yes? 2 no 0
+OK 14 go to monky 0
+  oh no scary 8-> 14
+14 (rem: 14) -19> 14 (rem: 14)
+div? 19 yes? 2 no 0
+OK 14 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+
+monky 2 []
+
+monky 3 [11, 2, 17]
+  oh no scary 11-> 14
+14 (rem: 14) -17> 14 (rem: 14)
+div? 17 yes? 0 no 1
+OK 14 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 17-> 20
+20 (rem: 3) -17> 3 (rem: 3)
+div? 17 yes? 0 no 1
+OK 3 go to monky 1
+
+monky 0 [6, 14, 14, 11, 11, 11, 11]
+  oh no scary 6-> 114
+114 (rem: 22) -23> 22 (rem: 22)
+div? 23 yes? 2 no 3
+OK 22 go to monky 3
+  oh no scary 14-> 266
+266 (rem: 13) -23> 13 (rem: 13)
+div? 23 yes? 2 no 3
+OK 13 go to monky 3
+  oh no scary 14-> 266
+266 (rem: 13) -23> 13 (rem: 13)
+div? 23 yes? 2 no 3
+OK 13 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+
+monky 1 [14, 5, 3]
+  oh no scary 14-> 20
+20 (rem: 1) -19> 1 (rem: 1)
+div? 19 yes? 2 no 0
+OK 1 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 3-> 9
+9 (rem: 9) -19> 9 (rem: 9)
+div? 19 yes? 2 no 0
+OK 9 go to monky 0
+
+monky 2 []
+
+monky 3 [22, 13, 13, 2, 2, 2, 2]
+  oh no scary 22-> 25
+25 (rem: 8) -17> 8 (rem: 8)
+div? 17 yes? 0 no 1
+OK 8 go to monky 1
+  oh no scary 13-> 16
+16 (rem: 16) -17> 16 (rem: 16)
+div? 17 yes? 0 no 1
+OK 16 go to monky 1
+  oh no scary 13-> 16
+16 (rem: 16) -17> 16 (rem: 16)
+div? 17 yes? 0 no 1
+OK 16 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+
+monky 0 [1, 11, 9]
+  oh no scary 1-> 19
+19 (rem: 19) -23> 19 (rem: 19)
+div? 23 yes? 2 no 3
+OK 19 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 9-> 171
+171 (rem: 10) -23> 10 (rem: 10)
+div? 23 yes? 2 no 3
+OK 10 go to monky 3
+
+monky 1 [8, 16, 16, 5, 5, 5, 5]
+  oh no scary 8-> 14
+14 (rem: 14) -19> 14 (rem: 14)
+div? 19 yes? 2 no 0
+OK 14 go to monky 0
+  oh no scary 16-> 22
+22 (rem: 3) -19> 3 (rem: 3)
+div? 19 yes? 2 no 0
+OK 3 go to monky 0
+  oh no scary 16-> 22
+22 (rem: 3) -19> 3 (rem: 3)
+div? 19 yes? 2 no 0
+OK 3 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+
+monky 2 []
+
+monky 3 [19, 2, 10]
+  oh no scary 19-> 22
+22 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 10-> 13
+13 (rem: 13) -17> 13 (rem: 13)
+div? 17 yes? 0 no 1
+OK 13 go to monky 1
+
+monky 0 [14, 3, 3, 11, 11, 11, 11]
+  oh no scary 14-> 266
+266 (rem: 13) -23> 13 (rem: 13)
+div? 23 yes? 2 no 3
+OK 13 go to monky 3
+  oh no scary 3-> 57
+57 (rem: 11) -23> 11 (rem: 11)
+div? 23 yes? 2 no 3
+OK 11 go to monky 3
+  oh no scary 3-> 57
+57 (rem: 11) -23> 11 (rem: 11)
+div? 23 yes? 2 no 3
+OK 11 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+
+monky 1 [5, 5, 13]
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 13-> 19
+19 (rem: 0) -19> 0 (rem: 0)
+div? 19 yes? 2 no 0
+OK 0 go to monky 2
+
+monky 2 [0]
+  oh no scary 0-> 0
+0 (rem: 0) -13> 0 (rem: 0)
+div? 13 yes? 1 no 3
+OK 0 go to monky 1
+
+monky 3 [13, 11, 11, 2, 2, 2, 2]
+  oh no scary 13-> 16
+16 (rem: 16) -17> 16 (rem: 16)
+div? 17 yes? 0 no 1
+OK 16 go to monky 1
+  oh no scary 11-> 14
+14 (rem: 14) -17> 14 (rem: 14)
+div? 17 yes? 0 no 1
+OK 14 go to monky 1
+  oh no scary 11-> 14
+14 (rem: 14) -17> 14 (rem: 14)
+div? 17 yes? 0 no 1
+OK 14 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+
+monky 0 [11, 11]
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+
+monky 1 [0, 16, 14, 14, 5, 5, 5, 5]
+  oh no scary 0-> 6
+6 (rem: 6) -19> 6 (rem: 6)
+div? 19 yes? 2 no 0
+OK 6 go to monky 0
+  oh no scary 16-> 22
+22 (rem: 3) -19> 3 (rem: 3)
+div? 19 yes? 2 no 0
+OK 3 go to monky 0
+  oh no scary 14-> 20
+20 (rem: 1) -19> 1 (rem: 1)
+div? 19 yes? 2 no 0
+OK 1 go to monky 0
+  oh no scary 14-> 20
+20 (rem: 1) -19> 1 (rem: 1)
+div? 19 yes? 2 no 0
+OK 1 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+
+monky 2 []
+
+monky 3 [2, 2]
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+
+monky 0 [6, 3, 1, 1, 11, 11, 11, 11]
+  oh no scary 6-> 114
+114 (rem: 22) -23> 22 (rem: 22)
+div? 23 yes? 2 no 3
+OK 22 go to monky 3
+  oh no scary 3-> 57
+57 (rem: 11) -23> 11 (rem: 11)
+div? 23 yes? 2 no 3
+OK 11 go to monky 3
+  oh no scary 1-> 19
+19 (rem: 19) -23> 19 (rem: 19)
+div? 23 yes? 2 no 3
+OK 19 go to monky 3
+  oh no scary 1-> 19
+19 (rem: 19) -23> 19 (rem: 19)
+div? 23 yes? 2 no 3
+OK 19 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+  oh no scary 11-> 209
+209 (rem: 2) -23> 2 (rem: 2)
+div? 23 yes? 2 no 3
+OK 2 go to monky 3
+
+monky 1 [5, 5]
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+  oh no scary 5-> 11
+11 (rem: 11) -19> 11 (rem: 11)
+div? 19 yes? 2 no 0
+OK 11 go to monky 0
+
+monky 2 []
+
+monky 3 [22, 11, 19, 19, 2, 2, 2, 2]
+  oh no scary 22-> 25
+25 (rem: 8) -17> 8 (rem: 8)
+div? 17 yes? 0 no 1
+OK 8 go to monky 1
+  oh no scary 11-> 14
+14 (rem: 14) -17> 14 (rem: 14)
+div? 17 yes? 0 no 1
+OK 14 go to monky 1
+  oh no scary 19-> 22
+22 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 19-> 22
+22 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+  oh no scary 2-> 5
+5 (rem: 5) -17> 5 (rem: 5)
+div? 17 yes? 0 no 1
+OK 5 go to monky 1
+round 20
+Monkey 0 touched stuff 95 times
+Monkey 1 touched stuff 101 times
+Monkey 2 touched stuff 9 times
+Monkey 3 touched stuff 99 times
+monky business = 9999
+0

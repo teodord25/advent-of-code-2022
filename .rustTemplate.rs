@@ -1,20 +1,8 @@
 use std::fs;
 
 
-fn part_1(input_str: &str) -> i64 {
-    let total = 0;
+fn code(input_str: &str) -> i64 {
 
-
-
-    total
-}
-
-fn part_2(input_str: &str) -> i64 {
-    let total = 0;
-
-
-
-    total
 }
 
 
