@@ -2,25 +2,25 @@ use std::fs;
 
 
 struct Monkey {
-    items: Vec<u128>,
-    operation: Box<dyn Fn(u128, u128) -> u128>,
-    op_num: u128,
-    yes: u128,
-    no: u128,
-    num: u128,
-    test: Box<dyn Fn(u128, u128, u128, u128) -> u128>,
-    seen: u128,
+    items: Vec<i64>,
+    operation: Box<dyn Fn(i64, i64) -> i64>,
+    op_num: i64,
+    yes: i64,
+    no: i64,
+    num: i64,
+    test: Box<dyn Fn(i64, i64, i64, i64) -> i64>,
+    seen: i64,
 }
 
 impl Monkey {
     fn new(
-        items: Vec<u128>,
-        op: impl Fn(u128, u128) -> u128 + 'static,
-        op_num: u128,
-        yes: u128,
-        no: u128,
-        num: u128,
-        test: impl Fn(u128, u128, u128, u128) -> u128 + 'static,
+        items: Vec<i64>,
+        op: impl Fn(i64, i64) -> i64 + 'static,
+        op_num: i64,
+        yes: i64,
+        no: i64,
+        num: i64,
+        test: impl Fn(i64, i64, i64, i64) -> i64 + 'static,
         ) -> Self 
     {
         Self {
@@ -37,7 +37,7 @@ impl Monkey {
 }
 
 
-fn part_2(input_str: &str) -> u128 {
+fn part_1(input_str: &str) -> i64 {
 
     let total = 0;
 
@@ -48,13 +48,13 @@ fn part_2(input_str: &str) -> u128 {
         let lines: Vec<&str> = monky.trim().split("\n").collect();
 
         // println!("{:?}", lines[1].trim().split(", ").collect::<Vec<&str>>());
-        let items: Vec<u128> = lines[1]
+        let items: Vec<i64> = lines[1]
             .trim()
             .split(": ")
             .last().unwrap()
             .split(", ")
             .map(
-                |x| x.parse::<u128>().unwrap()
+                |x| x.parse::<i64>().unwrap()
             ).collect();
         
         let op: Vec<&str> = lines[2]
@@ -65,88 +65,77 @@ fn part_2(input_str: &str) -> u128 {
             .split(" ")
             .collect();
 
-        let mut operation: fn(u128, u128) -> u128;
+        let mut operation: fn(i64, i64) -> i64;
          
         if op[1] == "+" {
-            operation = |old: u128, x: u128| old + x;
+            operation = |old: i64, x: i64| old + x;
         } else {
-            operation = |old: u128, x: u128| old * x;
+            operation = |old: i64, x: i64| old * x;
         }
         if op[2] == "old" {
-            operation = |old: u128, x: u128| old * old;
+            operation = |old: i64, x: i64| old * old;
         }
 
-        let op_num = op[2].parse::<u128>().unwrap_or(1);
+        let op_num = op[2].parse::<i64>().unwrap_or(1);
 
-        let num: u128 = lines[3].trim().split(" ").last().unwrap().parse::<u128>().unwrap();
-        let tr: u128 = lines[4].trim().split(" ").last().unwrap().parse::<u128>().unwrap();
-        let fl: u128 = lines[5].trim().split(" ").last().unwrap().parse::<u128>().unwrap();
+        let num: i64 = lines[3].trim().split(" ").last().unwrap().parse::<i64>().unwrap();
+        let tr: i64 = lines[4].trim().split(" ").last().unwrap().parse::<i64>().unwrap();
+        let fl: i64 = lines[5].trim().split(" ").last().unwrap().parse::<i64>().unwrap();
 
         // huehuehuehuehue
-        let test = |x: u128, tr: u128, fl: u128, num: u128| -> u128 {[tr, fl][((x % num) > 0) as usize]};
+        let test = |x: i64, tr: i64, fl: i64, num: i64| -> i64 {[tr, fl][((x % num) > 0) as usize]};
 
         let monkey = Monkey::new(items, operation, op_num, tr, fl, num, test);
 
         monkeys.push(monkey);
     }
 
-    for round in 0..20 {
+    for round in 0..10_000 {
         for i in 0..monkeys.len() {
-            // println!("\nmonky {i} {:?}", monkeys[i].items);
             for j in 0..monkeys[i].items.len() {
                 // inspect 
-                // print!("  oh no scary {}", monkeys[i].items[j]);
-                let mut item = monkeys[i].items[j];
-                let num = monkeys[i].num;
-
-
-                // item %= num;
-                item = (monkeys[i].operation)(item, num);
+                let mut item = (monkeys[i].operation)(monkeys[i].items[j], monkeys[i].op_num);
                 monkeys[i].seen += 1;
-                // item %= num;
-                item /= num;
-                
-                // println!("-> {item}");
 
+                // sigh
+                // item /= 3;
 
-                // let bruh = item;
-                // item -= item - (item % num);
-                // println!("{bruh} (rem: {}) -{num}> {item} (rem: {})", bruh % num, item % num);
+                // lcm >:(
+                item %= 9699690;
                 monkeys[i].items[j] = item;
 
                 // throw
                 let tr = monkeys[i].yes;
                 let fl = monkeys[i].no;
-                // println!("div? {num} yes? {tr} no {fl}");
-
-
+                let num = monkeys[i].num;
                 let monk = (monkeys[i].test)(item, tr, fl, num) as usize;
-                // println!("OK {item} go to monky {monk}");
                 monkeys[monk].items.push(item);
             }
             monkeys[i].items = vec![];
         }
 
-        match round {
-            0|1|2|19 => {
-                println!("round {}", round+1);
+        println!("round {}", round+1);
 
-                for m in 0..monkeys.len() {
-                    println!("Monkey {m} touched stuff {} times", monkeys[m].seen);
-                    // println!("Monkey {m} touched stuff {} times {:?}", monkeys[m].seen, monkeys[m].items);
-                }
-            },
-            _ => {}
+        for m in 0..monkeys.len() {
+            println!("Monkey {m} touched stuff {} times", monkeys[m].seen);
         }
     }
 
 
 
-    let mut activity = monkeys.iter().map(|monky| monky.seen).collect::<Vec<u128>>();
+    let mut activity = monkeys.iter().map(|monky| monky.seen).collect::<Vec<i64>>();
     activity.sort();
     activity.reverse();
 
     println!("monky business = {}", activity[0]*activity[1]);
+
+    total
+}
+
+fn part_2(input_str: &str) -> i64 {
+    let total = 0;
+
+
 
     total
 }
@@ -158,5 +147,6 @@ fn main() {
     if input_str.trim().len() == 0 {
         panic!("puzzle input string missing"); 
     }
+    println!("{}", part_1(&input_str));
     println!("{}", part_2(&input_str));
 }
