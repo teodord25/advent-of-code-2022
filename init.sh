@@ -18,4 +18,5 @@ cp ../.rustTemplate.rs Rust/src/main.rs
 cd Rust && echo "/target
 Cargo.lock
 /src/input.txt" >> .gitignore
+cd $day
 
