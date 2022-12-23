@@ -1,6 +1,6 @@
 use std::fs;
 
-fn print_state(map: Vec<Vec<char>>, curr: Option<[u32; 2]>) -> () {
+fn print_state(map: Vec<Vec<char>>, curr: Option<[usize; 2]>) -> () {
     let mut map = map.clone();
     if let Some(coords) = curr {
         map[coords[1] as usize][coords[0] as usize] = 'X';
@@ -44,10 +44,57 @@ fn code(input_str: &str) -> i64 {
     }
 
     println!("{start:?} {end:?}");
-    print_state(map, None);
+    print_state(map.clone(), None);
+
+    println!("{}", 'A' as u32);
+
+    println!("GO\n");
+    traverse(&map, start, 0);
+
 
     0
 }
+
+
+fn traverse(map: &Vec<Vec<char>>, current: [usize; 2], steps: usize) -> (bool, usize) {
+    let x = current[0];
+    let y = current[1];
+
+    let mut steps = 0;
+
+    if map[y][x] == 'E' {
+        return (true, steps + 1)
+    }
+
+    let mut done = false;
+
+    let mut directions: Vec<[usize;2]> = vec![];
+
+    let mut val = map[y][x] as u32;
+    if steps == 0 { val = 0; }
+    println!("val {} ({val:?}) ", val as u8 as char);
+
+    if y > 0 && x > 0 {
+        if val + 1 >= map[y-1][x] as u32 { directions.push([y-1, x]); }
+        if val + 1 >= map[y][x - 1] as u32 { directions.push([y, x - 1]); }
+    }
+
+    if val + 1 >= map[y+1][x] as u32 { directions.push([y+1, x]); }
+    if val + 1 >= map[y][x + 1] as u32 { directions.push([y, x + 1]); }
+
+    println!("directions {directions:?}");
+
+    for dir in directions {
+        (done, steps) = traverse(&map, dir, steps);
+        if done { break; }
+    }
+
+    print_state(map.clone(), Some(current));
+    println!("steps: {steps}");
+
+    (false, steps)
+}
+
 
 
 fn main() {
