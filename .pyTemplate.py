@@ -1,4 +1,4 @@
-def part_1(input_str: str) -> int:
+def part_1(input_str: str):
     result = 0
     input_list = input_str.split("\n")
 
@@ -6,10 +6,8 @@ def part_1(input_str: str) -> int:
     ...
 
 
-    return result
 
-
-def part_2(input_str: str) -> int:
+def part_2(input_str: str):
     result = 0
     input_list = input_str.split("\n")
     
@@ -17,15 +15,12 @@ def part_2(input_str: str) -> int:
     ...
 
 
-    return result
-
-
 def main(input_str):
     if len(input_str.strip()) == 0:
         raise NotImplementedError("puzzle input string missing")
 
-    print(part_1(input_str))
-    print(part_2(input_str))
+    part_1(input_str)
+    part_2(input_str)
 
 
 if __name__ == "__main__":
